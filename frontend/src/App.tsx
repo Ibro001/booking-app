@@ -5,6 +5,7 @@ import SignIn from "./pages/SignIn";
 import AddHotel from "./pages/AddHotel";
 import { useAppContext } from "./contexts/AppContext";
 import MyHotels from "./pages/MyHotels";
+import EditHotel from "./pages/EditHotel";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
         {isLoggedIn && (<>
           <Route path="/add-hotel" element={<Layouts><AddHotel /></Layouts>} />
           <Route path="/my-hotels" element={<Layouts><MyHotels /></Layouts>} />
+          <Route path="/edit-hotel/:hotelId" element={<Layouts><EditHotel /></Layouts>} />
         </>)}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
