@@ -7,6 +7,7 @@ import { useAppContext } from "./contexts/AppContext";
 import MyHotels from "./pages/MyHotels";
 import EditHotel from "./pages/EditHotel";
 import Search from "./pages/Search";
+import Detail from "./pages/Detail";
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/my-hotels" element={<Layouts><MyHotels /></Layouts>} />
           <Route path="/edit-hotel/:hotelId" element={<Layouts><EditHotel /></Layouts>} />
           <Route path="/search" element={<Layouts><Search /></Layouts>} />
+          <Route path="/detail/hotelId" element={<Layouts><Detail /></Layouts>} />
         </>)}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
