@@ -9,6 +9,7 @@ import EditHotel from "./pages/EditHotel";
 import Search from "./pages/Search";
 import Detail from "./pages/Detail";
 import Booking from "./pages/Booking";
+import MyBookings from "./pages/MyBookings";
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/edit-hotel/:hotelId" element={<Layouts><EditHotel /></Layouts>} />
           <Route path="/search" element={<Layouts><Search /></Layouts>} />
           <Route path="/detail/:hotelId" element={<Layouts><Detail /></Layouts>} />
+          <Route path="/my-bookings" element={<Layouts><MyBookings /></Layouts>} />
         </>)}
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
